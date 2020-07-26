@@ -62,9 +62,5 @@ const styles = StyleSheet.create({
      color:'#8E9295',
      textAlign: 'left'
    },
-   text:{
-   Color:'#F8FAF9'
-    
-
-   }
+  
   });

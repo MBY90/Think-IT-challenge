@@ -1,5 +1,5 @@
 import React ,{ useState } from 'react';
-import {ImageBackground,StyleSheet, Text,TextInput,Button} from 'react-native';
+import {Image,StyleSheet, Text,TextInput,Button,View} from 'react-native';
 export default function Main({navigation}) {
   const [name,setName]=useState('');
 
@@ -9,7 +9,10 @@ export default function Main({navigation}) {
   };
 
   return (
-    <ImageBackground source ={require('../assets/images/backgroundimg.png')} style={styles.container}> 
+    <View>
+    <View style={styles.container}>  <Image source ={require('../assets/images/backgroundimg.png')} ></Image> </View>
+   
+     <View style={styles.container}>   
  
       <Text style={styles.titleText}>Smarty</Text>
       <Text style={styles.baseText}>Welcome Home </Text>
@@ -17,9 +20,9 @@ export default function Main({navigation}) {
         placeholder='Your Name Please'
         onChangeText={changeHandler} 
         value={name} />
-      <Button title="Continue" onPress={ ()=>{navigation.navigate('Home',{name})}} style={{marginTop:'10'}}/>
-    
-    </ImageBackground>
+      <Button title="Continue" onPress={ ()=>{navigation.navigate('Home',{name})}}/>
+    </View>
+</View>
   );
 }
 
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: '10%'
+ 
   },
    
     titleText: {
