@@ -14,7 +14,7 @@ export default function Home({navigation}) {
     return(
     <View style={styles.container}>
 <Text>Welcome {navigation.getParam('name')}!!!</Text>
-    <Text>{today}</Text>
+    <Text style={styles.today} >{today}</Text>
     <ImageBackground source ={require('../assets/images/bathroom.png')}style={styles.imgBackground} >
                <Text>Bathroom</Text>
                <Text>6 Device</Text>
