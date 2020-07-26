@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import Main from '../components/Main';
-import Home from '../components/home';
+import Home from '../components/Home';
 const MyNavigator = createStackNavigator(
     {
       Main: {

@@ -1,5 +1,5 @@
 import React ,{ useState } from 'react';
-import {ImageBackground,StyleSheet, Text,TextInput,Button,View} from 'react-native';
+import {ImageBackground,StyleSheet, Text,View} from 'react-native';
 export default function Home({navigation}) {
   
     var today = new Date();
@@ -13,21 +13,21 @@ export default function Home({navigation}) {
     today = mm + '/' + dd + '/' + yyyy;
     return(
     <View style={styles.container}>
-<Text>{navigation.getParam('name')}</Text>
+<Text>Welcome {navigation.getParam('name')}!!!</Text>
     <Text>{today}</Text>
-    <ImageBackground source ={require('../assets/images/bathroom.png')} >
+    <ImageBackground source ={require('../assets/images/bathroom.png')}style={styles.imgBackground} >
                <Text>Bathroom</Text>
                <Text>6 Device</Text>
     </ImageBackground>
-<ImageBackground source ={require('../assets/images/bedroom.png')} style={styles.container}> 
+<ImageBackground source ={require('../assets/images/bedroom.png')}style={styles.imgBackground} > 
                <Text>Bedroom</Text>
                <Text>4 Device</Text>
  </ImageBackground>
-<ImageBackground source ={require('../assets/images/livingroom.png')}style={styles.container} >
+<ImageBackground source ={require('../assets/images/livingroom.png')}style={styles.imgBackground} >
                <Text>Livingroom</Text>
                <Text>7 Device</Text>
 </ImageBackground>
-<ImageBackground source ={require('../assets/images/mediaroom.png')}style={styles.container}> 
+<ImageBackground source ={require('../assets/images/mediaroom.png')}style={styles.imgBackground}> 
 <               Text>Mediaroom</Text>
                <Text>10 Device</Text>
 </ImageBackground>
@@ -44,12 +44,22 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-      baseText: {
-        fontFamily: "Cochin"
-      },
+
       titleText: {
         fontSize: 20,
         fontWeight: "bold"
       },
-   
+      imgBackground: {
+        width: '95%',
+        height: '95%',
+        flex: 1 ,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20
+},
+   today:{
+     color:'#8E9295',
+     textAlign: 'left'
+   }
   });

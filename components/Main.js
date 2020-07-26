@@ -30,9 +30,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-    baseText: {
-      fontFamily: "Cochin"
-    },
+   
     titleText: {
       fontSize: 20,
       fontWeight: "bold"
