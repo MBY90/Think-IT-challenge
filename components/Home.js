@@ -16,20 +16,20 @@ export default function Home({navigation}) {
 <Text>Welcome {navigation.getParam('name')}!!!</Text>
     <Text style={styles.today} >{today}</Text>
     <ImageBackground source ={require('../assets/images/bathroom.png')}style={styles.imgBackground} >
-               <Text>Bathroom</Text>
-               <Text>6 Device</Text>
+               <Text style={styles.text}>Bathroom</Text>
+               <Text style={styles.text}>6 Device</Text>
     </ImageBackground>
 <ImageBackground source ={require('../assets/images/bedroom.png')}style={styles.imgBackground} > 
-               <Text>Bedroom</Text>
-               <Text>4 Device</Text>
+               <Text style={styles.text}>Bedroom</Text>
+               <Text style={styles.text}>4 Device</Text>
  </ImageBackground>
 <ImageBackground source ={require('../assets/images/livingroom.png')}style={styles.imgBackground} >
-               <Text>Livingroom</Text>
-               <Text>7 Device</Text>
+               <Text style={styles.text}>Livingroom</Text>
+               <Text style={styles.text}>7 Device</Text>
 </ImageBackground>
 <ImageBackground source ={require('../assets/images/mediaroom.png')}style={styles.imgBackground}> 
-<               Text>Mediaroom</Text>
-               <Text>10 Device</Text>
+<               Text style={styles.text}>Mediaroom</Text>
+               <Text style={styles.text}>10 Device</Text>
 </ImageBackground>
         </View>
 
@@ -61,5 +61,10 @@ const styles = StyleSheet.create({
    today:{
      color:'#8E9295',
      textAlign: 'left'
+   },
+   text:{
+   Color:'#F8FAF9'
+    
+
    }
   });
