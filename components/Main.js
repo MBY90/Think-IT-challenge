@@ -1,5 +1,5 @@
 import React ,{ useState } from 'react';
-import {Image,StyleSheet, Text,TextInput,Button,View} from 'react-native';
+import {ImageBackground,StyleSheet, Text,TextInput,Button} from 'react-native';
 export default function Main({navigation}) {
   const [name,setName]=useState('');
 
@@ -9,10 +9,7 @@ export default function Main({navigation}) {
   };
 
   return (
-    <View>
-    <View style={styles.container}>  <Image source ={require('../assets/images/backgroundimg.png')} ></Image> </View>
-   
-     <View style={styles.container}>   
+    <ImageBackground source ={require('../assets/images/backgroundimg.png')} style={styles.container}> 
  
       <Text style={styles.titleText}>Smarty</Text>
       <Text style={styles.baseText}>Welcome Home </Text>
@@ -21,8 +18,8 @@ export default function Main({navigation}) {
         onChangeText={changeHandler} 
         value={name} />
       <Button title="Continue" onPress={ ()=>{navigation.navigate('Home',{name})}}/>
-    </View>
-</View>
+    
+    </ImageBackground>
   );
 }
 
