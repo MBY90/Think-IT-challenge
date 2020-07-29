@@ -15,12 +15,12 @@ export default function Main({navigation}) {
     
     <View style={styles.container}>
     <Text style={styles.titleText}>Smarty</Text>
-    <Text> Welcome Home </Text>
-    <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+    <Text style={styles.welcome}> Welcome Home </Text>
+    <TextInput style={styles.textinput}
       placeholder='Your Name Please'
       onChangeText={changeHandler} 
       value={name} />
-    <Button title="Continue" onPress={ ()=>{navigation.navigate('Home',{name})}}/>
+    <Button title="     Continue     " onPress={ ()=>{navigation.navigate('Home',{name})}}/>
     </View>
     </View>
   );
@@ -36,13 +36,31 @@ const styles = StyleSheet.create({
   },
    image:{
      flex :1,
-     width: 300,
-      height: 300 ,
-      alignItems: 'center'
+     width: 400,
+      height: 400 ,
+      alignItems: 'center',
+      marginBottom: 5,
+      marginTop: 5,
     },
     titleText: {
-      fontSize: 20,
-      fontWeight: "bold"
+      fontSize: 50,
+      fontWeight: "bold",
+      marginBottom: 5,
+      marginTop: 5,
+      
     },
+    textinput:{
+      marginBottom: 5,
+      marginTop: 5,
+      height: 40, 
+      borderColor: 'gray', 
+      borderWidth: 1,
+    },
+    welcome:
+    {
+      color:'#8e9295',
+      fontSize: 15,
+
+    }
  
 });

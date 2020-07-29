@@ -13,23 +13,24 @@ export default function Home({navigation}) {
     today = mm + '/' + dd + '/' + yyyy;
     return(
     <View style={styles.container}>
-<Text>Welcome {navigation.getParam('name')}!!!</Text>
-    <Text style={styles.today} >{today}</Text>
+      <Text style={styles.today} >{today}</Text>
+<Text style={styles.titleText}>Welcome, {navigation.getParam('name')} !</Text>
+    
     <ImageBackground source ={require('../assets/images/bathroom.png')}style={styles.imgBackground} >
                <Text style={styles.text}>Bathroom</Text>
-               <Text style={styles.text}>6 Device</Text>
+               <Text style={styles.text2}>6 Device</Text>
     </ImageBackground>
 <ImageBackground source ={require('../assets/images/bedroom.png')}style={styles.imgBackground} > 
                <Text style={styles.text}>Bedroom</Text>
-               <Text style={styles.text}>4 Device</Text>
+               <Text style={styles.text2}>4 Device</Text>
  </ImageBackground>
 <ImageBackground source ={require('../assets/images/livingroom.png')}style={styles.imgBackground} >
                <Text style={styles.text}>Livingroom</Text>
-               <Text style={styles.text}>7 Device</Text>
+               <Text style={styles.text2}>7 Device</Text>
 </ImageBackground>
 <ImageBackground source ={require('../assets/images/mediaroom.png')}style={styles.imgBackground}> 
 <               Text style={styles.text}>Mediaroom</Text>
-               <Text style={styles.text}>10 Device</Text>
+               <Text style={styles.text2}>10 Device</Text>
 </ImageBackground>
         </View>
 
@@ -46,21 +47,51 @@ const styles = StyleSheet.create({
     },
 
       titleText: {
-        fontSize: 20,
-        fontWeight: "bold"
+        fontSize: 15,
+        fontWeight: "bold",
+        top:10,
+        left:5,
+        marginBottom: 10,
+        marginTop: 10,
+        
+        
       },
       imgBackground: {
-        width: '95%',
-        height: '95%',
+        width: 350,
+        height: 150,
         flex: 1 ,
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+        borderTopRightRadius: 10,
+        borderTopLeftRadius: 10,
+        overflow: 'hidden',
+        marginBottom: 10,
+        marginTop: 10,
 },
    today:{
      color:'#8E9295',
-     textAlign: 'left'
+     fontSize: 10,
+     position:'absolute',
+     left:5,
+     top:5,
    },
-  
+   text:{
+     flex:1,
+    color:'#fffaf0',
+    textAlign: 'left',
+    marginBottom: 5,
+    position:'absolute',
+    left:5,
+    bottom:30,
+    
+   },
+   text2:{
+    flex:1,
+    color:'#fffaf0',
+    textAlign: 'left',
+    marginBottom: 5,
+    position:'absolute',
+    left:5,
+    bottom:5,
+   }
   });
