@@ -54,10 +54,9 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginTop: 10,
         
-        
       },
       imgBackground: {
-        width: 350,
+        width: 300,
         height: 150,
         flex: 1 ,
         borderBottomLeftRadius: 10,
